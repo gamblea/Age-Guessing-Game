@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="Age_Guessing_Game.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Age_Guessing_Game"
+    RequestedTheme="Light">
+
+</Application>
