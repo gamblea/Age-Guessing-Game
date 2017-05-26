@@ -7,51 +7,26 @@ using Microsoft.ProjectOxford.Vision;
 using Microsoft.ProjectOxford.Vision.Contract;
 using System.IO;
 using Windows.UI.Popups;
+using Microsoft.ProjectOxford.Face.Contract;
+using Microsoft.ProjectOxford.Face;
+using Windows.Storage;
 
 namespace Age_Guessing_Game
 {
 
     class Person
-    {
-        public Person(Uri pictureSource, string name, int realAge)
+    { 
+        public Person(StorageFile picture, string name, int realAge)
         {
-            this.PictureSource = pictureSource;
+            this.Picture = picture;
             this.Name = name;
+            this.RealAge = realAge;
         }
 
         public string Name { get; set; }
 
-        public Uri PictureSource { get; set; }
+        public StorageFile Picture { get; set; }
 
         public int RealAge { get; set; }
-
-        public int AiGuessAge { get; set; }
-
-        public async Task CalculateAiGuess()
-        {
-            int age = 0;
-
-            VisionServiceClient client = new VisionServiceClient("bcdbb1dc3e304fe580a20f1bf6afe68d");
-
-            AnalysisResult analysisResult;
-            var features = new VisualFeature[] {VisualFeature.Faces};
-
-            var file = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(PictureSource);
-
-            var fileStream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-
-            analysisResult = await client.AnalyzeImageAsync(fileStream.AsStream(), features);
-
-            foreach (Face face in analysisResult.Faces)
-            {
-                age = face.Age;
-            }
-            var message = new MessageDialog("The age has been set for " + Name + "The age is " + age);
-            await message.ShowAsync();
-
-            AiGuessAge = age;
-        }
-
-
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Storage;
 
 namespace Age_Guessing_Game
 {
@@ -20,24 +21,29 @@ namespace Age_Guessing_Game
         }
 
         private Person currentPerson;
+
         public Person CurentPerson
         {
-            get
-            {
-                return currentPerson;
-            }
+            get { return currentPerson; }
             set
             {
                 currentPerson = value;
-                UpdatePerson();
+                UpdateDisplayBox(currentPerson);
             }
         }
-        
-        private void UpdatePerson()
+      
+        private async void UpdateDisplayBox(Person person)
         {
+            StorageFile  fileOfPicture = person.Picture;
 
-            pictureFrame.Source = new BitmapImage(currentPerson.PictureSource); //currentPerson.PictureSource
-            pictureHeader.Text = currentPerson.Name;
+            using (var stream = await fileOfPicture.OpenAsync(FileAccessMode.Read))
+            {
+                BitmapImage img = new BitmapImage();
+                await img.SetSourceAsync(stream);
+
+                pictureFrame.Source = img;
+                pictureHeader.Text = person.Name;
+            }
         }
 
     }

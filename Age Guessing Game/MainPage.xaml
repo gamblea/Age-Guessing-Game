@@ -21,15 +21,15 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="title" HorizontalAlignment="Center" Margin="368,48,687,8" TextWrapping="Wrap" Text="Who's Older?" VerticalAlignment="Center" Height="136" Width="545" Grid.ColumnSpan="2" FontSize="72" TextAlignment="Center" Grid.Column="1"/>
-        <Image x:Name="image1" HorizontalAlignment="Center" Height="400" VerticalAlignment="Center" Width="400" Margin="280,88" Grid.Row="2" Grid.ColumnSpan="2" Stretch="Fill" />
-        <Image x:Name="image2" HorizontalAlignment="Center" Height="400" VerticalAlignment="Center" Width="400" Margin="280,88" Grid.Row="2" Grid.Column="2" Stretch="Fill"/>
-        <TextBlock x:Name="image1Header" HorizontalAlignment="Center" Margin="69,16,389,16" Grid.Row="1" TextWrapping="Wrap" Text="Person 1" VerticalAlignment="Center" FontSize="48" Grid.Column="1"/>
-        <TextBlock x:Name="image2Header" HorizontalAlignment="Center" Margin="389,16" Grid.Row="1" TextWrapping="Wrap" Text="Person 2" VerticalAlignment="Center" Grid.Column="2" FontSize="48"/>
+        <TextBlock x:Name="title" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Who's Older?" VerticalAlignment="Center" Height="136" Width="545" Grid.ColumnSpan="3" FontSize="72" TextAlignment="Center"/>
+        <Image x:Name="image1" HorizontalAlignment="Center" Height="400" VerticalAlignment="Center" Width="400" Margin="0" Grid.Row="2" Grid.ColumnSpan="2" Stretch="Fill" />
+        <Image x:Name="image2" HorizontalAlignment="Center" Height="400" VerticalAlignment="Center" Width="400" Margin="0" Grid.Row="2" Grid.Column="2" Stretch="Fill"/>
+        <TextBlock x:Name="image1Header" HorizontalAlignment="Center" Margin="0" Grid.Row="1" TextWrapping="Wrap" Text="Person 1" VerticalAlignment="Center" FontSize="48" Width="277" Grid.ColumnSpan="2" TextAlignment="Center"/>
+        <TextBlock x:Name="image2Header" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Person 2" VerticalAlignment="Center" Grid.Column="2" FontSize="48" Width="214" TextAlignment="Center" Grid.Row="1"/>
         <TextBlock x:Name="playerScoreHeader" HorizontalAlignment="Center" Margin="0" Grid.Row="3" TextWrapping="Wrap" Text="Player Score:" VerticalAlignment="Center" FontSize="24"/>
         <TextBlock x:Name="compScoreHeader" HorizontalAlignment="Center" Margin="0" Grid.Row="4" TextWrapping="Wrap" Text="Computer Score:" VerticalAlignment="Center" FontSize="24"/>
-        <ProgressBar Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="20" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="1401"/>
-        <ProgressBar Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" Height="20" Width="1399"/>
+        <ProgressBar Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="20" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="1000" Maximum="10"/>
+        <ProgressBar Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" Height="20" Width="1000" Maximum="10"/>
         <Button x:Name="person2Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="400" Width="400" Grid.Column="2" Margin="0" Grid.Row="2" Click="person2Button_Click" Opacity="0"/>
         <Button x:Name="person1Button" Margin="0" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Width="400" Height="400" Click="person1Button_Click" Opacity="0"/>
 
