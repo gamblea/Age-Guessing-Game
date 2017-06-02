@@ -48,7 +48,7 @@ namespace Age_Guessing_Game
             displayBoxes = new List<DisplayBox> { new DisplayBox(pictureFrame: image1, pictureHeader: image1Header), new DisplayBox(pictureFrame: image2, pictureHeader: image2Header) };
 
             player1 = new Player(playerProgressBar);
-            computer = new Computer(computerProgressBar, "1e01fd74e3794b40bd6fdcee3ef81bda");
+            computer = new Computer(computerProgressBar, "Place for Access Key");
 
             chekMark = await getBitMapFromAssets("chekMark.png");
             xMark = await getBitMapFromAssets("xMark.png");
