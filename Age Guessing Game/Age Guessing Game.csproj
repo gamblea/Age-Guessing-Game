@@ -112,8 +112,31 @@
     <None Include="Age Guessing Game_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Pictures\Bob22.jpg" />
-    <Content Include="Assets\Pictures\John20.jpg" />
+    <Content Include="Assets\chekMark.png" />
+    <Content Include="Assets\Pictures\Andrew-17.5.png" />
+    <Content Include="Assets\Pictures\Angela-17.png" />
+    <Content Include="Assets\Pictures\Atbeen-18.jpg" />
+    <Content Include="Assets\Pictures\Audrey-16.jpg" />
+    <Content Include="Assets\Pictures\Catalina-17.5.jpg" />
+    <Content Include="Assets\Pictures\David-17.jpg" />
+    <Content Include="Assets\Pictures\Eric-18.png" />
+    <Content Include="Assets\Pictures\Esli-20.jpg" />
+    <Content Include="Assets\Pictures\Hunter-16.jpg" />
+    <Content Include="Assets\Pictures\Jacqueline-19.png" />
+    <Content Include="Assets\Pictures\Julie-19.png" />
+    <Content Include="Assets\Pictures\Kevin-18.jpg" />
+    <Content Include="Assets\Pictures\Lia-17.png" />
+    <Content Include="Assets\Pictures\Marisa-19.png" />
+    <Content Include="Assets\Pictures\Meeran-17.png" />
+    <Content Include="Assets\Pictures\Olivia-17.5.png" />
+    <Content Include="Assets\Pictures\Razia-18.5.png" />
+    <Content Include="Assets\Pictures\Reza-16.5.jpg" />
+    <Content Include="Assets\Pictures\Rio-17.5.jpg" />
+    <Content Include="Assets\Pictures\Saad-17.jpg" />
+    <Content Include="Assets\Pictures\Sandy-18.jpg" />
+    <Content Include="Assets\Pictures\Sue Rim-17.jpg" />
+    <Content Include="Assets\Pictures\Sydney-18.png" />
+    <Content Include="Assets\xMark.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

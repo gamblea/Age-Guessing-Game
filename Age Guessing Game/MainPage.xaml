@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="2*"/>
@@ -22,16 +22,22 @@
             <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="title" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Who's Older?" VerticalAlignment="Center" Height="136" Width="545" Grid.ColumnSpan="3" FontSize="72" TextAlignment="Center"/>
+
         <Image x:Name="image1" HorizontalAlignment="Center" Height="400" VerticalAlignment="Center" Width="400" Margin="0" Grid.Row="2" Grid.ColumnSpan="2" Stretch="Fill" />
+        <Image x:Name="image1Above" HorizontalAlignment="Center" Height="300" VerticalAlignment="Center" Width="300" Margin="0" Grid.Row="2" Grid.ColumnSpan="2" Stretch="Fill" Source="Assets/chekMark.png" Opacity="0" />
+
+
         <Image x:Name="image2" HorizontalAlignment="Center" Height="400" VerticalAlignment="Center" Width="400" Margin="0" Grid.Row="2" Grid.Column="2" Stretch="Fill"/>
+        <Image x:Name="image2Above" HorizontalAlignment="Center" Height="300" VerticalAlignment="Center" Width="300" Margin="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="3" Stretch="Fill" Source="Assets/chekMark.png" Opacity="0" />
         <TextBlock x:Name="image1Header" HorizontalAlignment="Center" Margin="0" Grid.Row="1" TextWrapping="Wrap" Text="Person 1" VerticalAlignment="Center" FontSize="48" Width="277" Grid.ColumnSpan="2" TextAlignment="Center"/>
         <TextBlock x:Name="image2Header" HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Text="Person 2" VerticalAlignment="Center" Grid.Column="2" FontSize="48" Width="214" TextAlignment="Center" Grid.Row="1"/>
         <TextBlock x:Name="playerScoreHeader" HorizontalAlignment="Center" Margin="0" Grid.Row="3" TextWrapping="Wrap" Text="Player Score:" VerticalAlignment="Center" FontSize="24"/>
-        <TextBlock x:Name="compScoreHeader" HorizontalAlignment="Center" Margin="0" Grid.Row="4" TextWrapping="Wrap" Text="Computer Score:" VerticalAlignment="Center" FontSize="24"/>
-        <ProgressBar Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="20" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="1000" Maximum="10"/>
-        <ProgressBar Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" Height="20" Width="1000" Maximum="10"/>
+        <TextBlock x:Name="compScoreHeader" HorizontalAlignment="Center" Margin="0" Grid.Row="4" TextWrapping="Wrap" Text="AI Score:" VerticalAlignment="Center" FontSize="24"/>
+        <ProgressBar x:Name="playerProgressBar" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="20" Margin="0" Grid.Row="3" VerticalAlignment="Center" Width="1000" Maximum="5"/>
+        <ProgressBar x:Name="computerProgressBar"  Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" Height="20" Width="1000" Maximum="5"/>
         <Button x:Name="person2Button" HorizontalAlignment="Center" VerticalAlignment="Center" Height="400" Width="400" Grid.Column="2" Margin="0" Grid.Row="2" Click="person2Button_Click" Opacity="0"/>
         <Button x:Name="person1Button" Margin="0" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Width="400" Height="400" Click="person1Button_Click" Opacity="0"/>
+        <Button x:Name="gameOverButton" Content="End of Game Button" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Center" Height="250" Width="800" FontFamily="Elephant" FontSize="48" Grid.ColumnSpan="3" Click="gameOverButton_Click" Opacity="0" Background="#CCFFFFFF" Visibility="Collapsed" BorderBrush="Black"/>
 
     </Grid>
 </Page>

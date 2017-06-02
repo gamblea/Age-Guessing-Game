@@ -34,19 +34,21 @@ namespace Age_Guessing_Game
             {
                 return (int) playerProgressBar.Value;
             }
-            private set
+            set
             {
                 playerProgressBar.Value = value;
             }
         }
 
-        public void EvaluateGuess(Guess correct)
+        public bool EvaluateGuess(Guess correct)
         {
             if (CurrentGuess == correct)
             {
-                Score++;
+                CurrentGuess = Guess.None;
+                return true;
             }
             CurrentGuess = Guess.None;
+            return false;
         }       
     }
 }

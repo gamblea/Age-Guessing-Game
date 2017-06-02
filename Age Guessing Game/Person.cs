@@ -16,7 +16,7 @@ namespace Age_Guessing_Game
 
     class Person
     { 
-        public Person(StorageFile picture, string name, int realAge)
+        public Person(StorageFile picture, string name, double realAge)
         {
             this.Picture = picture;
             this.Name = name;
@@ -27,6 +27,45 @@ namespace Age_Guessing_Game
 
         public StorageFile Picture { get; set; }
 
-        public int RealAge { get; set; }
+        public double RealAge { get; set; }
+
+        public bool SameAge(Person person)
+        {
+            if (RealAge == person.RealAge)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        // override object.Equals
+        public bool Equals(Person person)
+        {
+            //       
+            // See the full list of guidelines at
+            //   http://go.microsoft.com/fwlink/?LinkID=85237  
+            // and also the guidance for operator== at
+            //   http://go.microsoft.com/fwlink/?LinkId=85238
+            //
+
+            System.Diagnostics.Debug.WriteLine("Equals: " + Name);
+            System.Diagnostics.Debug.WriteLine("Equals: " + person.Name);
+
+
+            if (person == null || GetType() != person.GetType())
+            {
+                return false;
+            }
+
+            if (Name == person.Name && RealAge == person.RealAge)
+            {
+                return true;
+            }
+
+            // TODO: write your implementation of Equals() here
+            return false;
+        }
+
     }
 }

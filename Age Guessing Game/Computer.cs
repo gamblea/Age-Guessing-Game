@@ -20,7 +20,7 @@ namespace Age_Guessing_Game
             this.client = new FaceServiceClient(key);
         }
 
-        public async void MakeGuess(Person person1, Person person2)
+        public async Task MakeGuess(Person person1, Person person2)
         {
             double person1AgeGuess = await GetAge(person1);
             double person2AgeGuess = await GetAge(person2);
@@ -51,6 +51,7 @@ namespace Age_Guessing_Game
 
                 if (face == null || face.FaceAttributes.Age == 0.0)
                 {
+                    System.Diagnostics.Debug.WriteLine("Computer did not find a face.");
                     return -1;
                 }
 
